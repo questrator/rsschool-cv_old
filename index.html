@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS-School CV — Slava Ivanov (questrator)</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+    <h1>Slava Ivanov</h1>
+    <h3>Front-end Developer student</h3>
+
+    <hr>
+
+    <h4>Contacts</h4>
+    <ul>
+        <li><strong>Location:</strong> Taganrog, Russia</li>
+        <li><strong>Phone:</strong> +7 (988) 568-72-36</li>
+        <li><strong>Email:</strong> <a href="mailto:drumtrack@yandex.com">drumtrack@yandex.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/questrator" target="_blank">questrator</a></li>
+    </ul>
+
+    <hr>
+
+    <h4>About me:</h4>
+
+    <p>I am currently working as a content manager and site administrator.
+        I plan to become a frontend developer.
+        Wish me luck 😀</p>
+
+    <hr>
+
+    <h4>Skills and Proficiency:</h4>
+
+    <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript (basics)</li>
+        <li>React (basics)</li>
+        <li>Node.js (basics)</li>
+        <li>Git, GitHub (basics)</li>
+        <li>Adobe Photoshop</li>
+    </ul>
+
+    <hr>
+
+    <h4>Code example:</h4>
+
+    <p><strong>Snail Sort</strong> kata from CodeWars (<a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1"
+            target="_blank">link</a>)</p>
+
+    <blockquote>
+        Given an <em>n x n</em> array, return the array elements arranged from outermost elements to the middle element,
+        traveling clockwise.<br>
+        <pre>
+        array = [[1,2,3],
+                 [4,5,6],
+                 [7,8,9]]
+        snail(array) → [1,2,3,6,9,8,7,4,5]
+        </pre>
+        <p>This image will illustrate things more clearly:</p>
+        <img src="http://www.haan.lu/files/2513/8347/2456/snail.png" alt="Snail Sort kata illustration">
+    </blockquote>
+
+    <strong>My solution:</strong><br>
+
+    <pre>
+        function snail(array) {
+            let result = [];
+            let k = array.length;
+            for (let i = 0; i &lt; k / 2; i++) {
+              result.push(...array[0]);
+              array.shift();
+              for (let j = 0; j &lt; array.length - 1; j++) {
+                result.push(array[j][array[j].length-1]);
+                array[j].pop();
+              }
+              if (array.length == 0) break;
+              result.push(...array[array.length - 1].reverse());
+              for (let j = array.length - 2; j &gt;= 1 ; j--) {
+                result.push(array[j][0]);
+                array[j].shift();
+              }
+              array.pop();
+            }
+            return result;
+          }
+        </pre>
+
+    <hr>
+
+    <h4>Courses:</h4>
+    <ul>
+        <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+    </ul>
+
+    <hr>
+
+    <h4>Languages:</h4>
+    <ul>
+        <li>Russian (native)</li>
+        <li>English (B1)</li>
+    </ul>
+
+</body>
+
+</html>
