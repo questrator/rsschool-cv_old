@@ -133,7 +133,30 @@ h2.person-position {
     background-color: #4fa3f2;
 }
 
+ul.person-contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+}
 
+li.person-contact {
+    display: flex;
+    list-style: none;
+    padding-left: 56px;
+    line-height: 3rem;
+}
+
+li.person-contact, li.person-contact > a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+li.place {background: url("../images/icon-place.png") left center no-repeat transparent;}
+li.phone {background: url("../images/icon-phone.png") left center no-repeat transparent;}
+li.email {background: url("../images/icon-email.png") left center no-repeat transparent;}
+li.github {background: url("../images/icon-github.png") left center no-repeat transparent;}
 
 .header-main-divider {
     display: block;
@@ -153,7 +176,6 @@ h2.person-position {
     background-image: url("../images/bg-grid-white.png");
     background-position: top center;
     background-repeat: repeat repeat;
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 75, 139, 0.8), inset 0px -2px 0px 0px rgba(172, 233, 255, 0.77);
     width: 100%;
     min-width: 1200px;
     min-height: 300px;
