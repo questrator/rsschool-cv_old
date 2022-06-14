@@ -13,7 +13,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.head-wrapper {
+.header-wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -226,6 +226,7 @@ h2.section-title {
 
 .section-description {
     display: flex;
+    min-width: 800px;
     max-width: 800px;
     margin-bottom: 40px;
     font-size: 1.4rem;
@@ -235,3 +236,66 @@ h2.section-title {
 
 
 
+
+
+
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #307cc2;
+    background-image: linear-gradient(0deg, rgba(0, 36, 70, 0.25) 0%, rgba(0, 36, 70, 0.55) 100%), url("../images/bg-grid-blue.png");
+    background-position: top center;
+    background-repeat: repeat repeat;
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 75, 139, 0.8), inset 0px 2px 0px 0px rgba(172, 233, 255, 0.77);
+    width: 100%;
+    min-width: 1200px;    
+    min-height: 100px;
+}
+
+footer.footer-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 124px;
+    min-width: 1200px;
+    max-width: 1200px;
+}
+
+footer.footer-block > div {
+    display: flex;
+    justify-content: center;
+    min-width: 240px;
+}
+
+.footer-github {
+    display: flex;
+}
+
+div.person-contact {
+    display: flex;
+    padding-left: 56px;
+    line-height: 3rem;
+}
+
+div.person-contact > a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div.github {background: url("../images/icon-github.png") left center no-repeat transparent;}
+
+.footer-copy {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.footer-rss {
+    display: flex;
+}
