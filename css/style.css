@@ -226,6 +226,8 @@ h2.section-title {
 
 .section-description {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     min-width: 800px;
     max-width: 800px;
     margin-bottom: 40px;
@@ -234,11 +236,25 @@ h2.section-title {
     color: #626262;
 }
 
+.label-out {
+    display: block;
+    margin: 12px 6px 36px 6px;
+    padding: 24px 36px;
+    border-radius: 16px;    
+}
 
+.label-in {
+    display: block;
+    margin: 12px 36px 24px 36px;
+    padding: 24px 36px;
+    border-radius: 8px;    
+}
 
+.bg-red {background-color: #ff548724;}
+.bg-blue {background-color: #5493ff24;}
+.bg-darkred {background-color: #e57093a3; color: #ffffff}
 
-
-
+.center {text-align: center;}
 
 .footer-wrapper {
     display: flex;

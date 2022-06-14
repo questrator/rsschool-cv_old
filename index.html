@@ -78,6 +78,44 @@
                     <p><strong>Snail Sort</strong> kata from CodeWars (<a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1"
                         target="_blank">link</a>)</p>
 
+                        <blockquote class="label-out bg-red">
+                            Given an <em>n x n</em> array, return the array elements arranged from outermost elements to the middle element,
+                            traveling clockwise.<br>
+                            <pre class="label-in bg-darkred">
+            array = [[1,2,3],
+                     [4,5,6],
+                     [7,8,9]]
+    snail(array) → [1,2,3,6,9,8,7,4,5]</pre>
+                            <p>This image will illustrate things more clearly:</p>
+                            <div class="center">
+                                <img src="http://www.haan.lu/files/2513/8347/2456/snail.png" alt="Snail Sort kata illustration">
+                            </div>
+                        </blockquote>
+                    
+                        <strong>My solution:</strong>
+                    
+                        <pre class="label-out bg-blue">
+function snail(array) {
+    let result = [];
+    let k = array.length;
+    for (let i = 0; i &lt; k / 2; i++) {
+        result.push(...array[0]);
+        array.shift();
+        for (let j = 0; j &lt; array.length - 1; j++) {
+        result.push(array[j][array[j].length-1]);
+        array[j].pop();
+        }
+        if (array.length == 0) break;
+        result.push(...array[array.length - 1].reverse());
+        for (let j = array.length - 2; j &gt;= 1 ; j--) {
+        result.push(array[j][0]);
+        array[j].shift();
+        }
+        array.pop();
+    }
+    return result;
+}</pre>    
+
                 </div>
             </section>
             <section>
