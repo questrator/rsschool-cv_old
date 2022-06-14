@@ -8,6 +8,7 @@
     <title>Slava Ivanov &ndash; front-end developer &ndash; CV</title>
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/highlight-styles/gradient-dark.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
@@ -81,11 +82,10 @@
                         <blockquote class="label-out bg-red">
                             Given an <em>n x n</em> array, return the array elements arranged from outermost elements to the middle element,
                             traveling clockwise.<br>
-                            <pre class="label-in bg-darkred">
-            array = [[1,2,3],
+                            <pre class="label-in bg-darkred"><code class="language-js">            array = [[1,2,3],
                      [4,5,6],
                      [7,8,9]]
-    snail(array) → [1,2,3,6,9,8,7,4,5]</pre>
+    snail(array) → [1,2,3,6,9,8,7,4,5]</code></pre>
                             <p>This image will illustrate things more clearly:</p>
                             <div class="center">
                                 <img src="http://www.haan.lu/files/2513/8347/2456/snail.png" alt="Snail Sort kata illustration">
@@ -94,8 +94,7 @@
                     
                         <strong>My solution:</strong>
                     
-                        <pre class="label-out bg-blue">
-function snail(array) {
+                        <pre class="label-out bg-darkblue"><code class="language-js">function snail(array) {
     let result = [];
     let k = array.length;
     for (let i = 0; i &lt; k / 2; i++) {
@@ -114,7 +113,7 @@ function snail(array) {
         array.pop();
     }
     return result;
-}</pre>    
+}</code></pre>    
 
                 </div>
             </section>
@@ -160,7 +159,8 @@ function snail(array) {
             <div class="footer-rss"><a href="https://rs.school/js/" target="_blank"><img src="./images/rs_school_js.svg" height="70" alt="Front-end / JS - RS School"></a></div>
         </footer>
     </div>
-    <script src="./script.js"></script>
+    <script src="./js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 </html>

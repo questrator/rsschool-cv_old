@@ -239,20 +239,33 @@ h2.section-title {
 .label-out {
     display: block;
     margin: 12px 6px 36px 6px;
-    padding: 24px 36px;
-    border-radius: 16px;    
+    padding: 16px 16px;
+    border-radius: 16px;  
+    font-size: 1.3rem;  
 }
 
 .label-in {
     display: block;
     margin: 12px 36px 24px 36px;
-    padding: 24px 36px;
-    border-radius: 8px;    
+    padding: 16px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
 }
 
-.bg-red {background-color: #ff548724;}
-.bg-blue {background-color: #5493ff24;}
-.bg-darkred {background-color: #e57093a3; color: #ffffff}
+.bg-red {background-color: #ff81a624;}
+.bg-blue {background-color: #76c6ff24; font-size: 1.2rem;}
+.bg-darkblue {background-color: #0b71b9ad; color: #ffffff; font-size: 1.2rem;}
+.bg-darkred {background-color: #c92052a3; color: #ffffff;}
+
+pre.bg-darkred > code.hljs {
+    background: #bf2a4cb5;
+    border-radius: 8px;
+}
+
+pre.bg-darkblue > code.hljs {
+    background: #04558fa6;
+    border-radius: 8px;
+}
 
 .center {text-align: center;}
 
