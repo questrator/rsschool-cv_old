@@ -195,6 +195,11 @@ main {
     min-width: 1200px;
 }
 
+main a {
+    color:#3694eb;
+    text-decoration: underline dotted;
+}
+
 section {
     display: flex;
     flex-direction: column;
