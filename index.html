@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slava Ivanov &ndash; front-end developer &ndash; CV</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/highlight-styles/gradient-dark.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="header-block">
+            <nav class="nav-block">
+                <ul class="menu-block">
+                    <li class="menu-item"><a href="#contacts">contacts</a></li>
+                    <li class="menu-item"><a href="#about">about</a></li>
+                    <li class="menu-item"><a href="#skills">skills</a></li>
+                    <li class="menu-item"><a href="#code">code</a></li>
+                    <li class="menu-item"><a href="#projects">projects</a></li>
+                    <li class="menu-item"><a href="#courses">courses</a></li>
+                    <li class="menu-item"><a href="#languages">languages</a></li>
+                </ul>
+            </nav>
+            <div class="person-block">
+                <figure class="person-photo">
+                    <img src="./images/photo.jpg" width="360" height="360" alt="My photo" title="That's me =)">
+                </figure>
+                <aside class="person-info">
+                    <h1 class="person-name">Slava Ivanov</h1>
+                    <h2 class="person-position">front-end developer</h2>
+                    <div class="person-info-divider"></div>
+                    <ul class="person-contacts"  id="contacts">
+                        <li class="person-contact place">Taganrog, Russia</li>
+                        <li class="person-contact phone"><a href="tel:+79885687236">+7 (988) 568-72-36</a></li>
+                        <li class="person-contact email"><a href="mailto:drumtrack@yandex.ru">drumtrack@yandex.ru</a></li>
+                        <li class="person-contact github"><a href="https://github.com/questrator" target="_blank">questrator</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </header>
+    </div>
+    <div class="main-wrapper">
+        <div class="header-main-divider"></div>
+        <main>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="about">About me</h2>
+                </div>
+                <div class="section-description">I am currently working as a content manager and site administrator. I plan to become a frontend developer. Wish me luck 😋</div>
+            </section>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="skills">Skills and Proficiency</h2>
+                </div>
+                <div class="section-description">
+                    <ul>
+                        <li>HTML &amp; CSS</li>
+                        <li>JavaScript (basics)</li>
+                        <li>React (basics)</li>
+                        <li>Node.js (basics)</li>
+                        <li>Git, GitHub (basics)</li>
+                        <li>Adobe Photoshop</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="code">Code example</h2>
+                </div>
+                <div class="section-description">
+
+                    <p><strong>Snail Sort</strong> kata from CodeWars (<a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1" target="_blank">link</a>)</p>
+
+                        <blockquote class="label-out bg-red">
+                            Given an <em>n x n</em> array, return the array elements arranged from outermost elements to the middle element,
+                            traveling clockwise.<br>
+                            <pre class="label-in bg-darkred"><code class="language-js">            array = [[1,2,3],
+                     [4,5,6],
+                     [7,8,9]]
+    snail(array) → [1,2,3,6,9,8,7,4,5]</code></pre>
+                            <p>This image will illustrate things more clearly:</p>
+                            <div class="center">
+                                <img src="http://www.haan.lu/files/2513/8347/2456/snail.png" alt="Snail Sort kata illustration">
+                            </div>
+                        </blockquote>
+                    
+                        <strong>My solution:</strong>
+                    
+                        <pre class="label-out bg-darkblue"><code class="language-js">function snail(array) {
+    let result = [];
+    let k = array.length;
+    for (let i = 0; i &lt; k / 2; i++) {
+        result.push(...array[0]);
+        array.shift();
+        for (let j = 0; j &lt; array.length - 1; j++) {
+        result.push(array[j][array[j].length-1]);
+        array[j].pop();
+        }
+        if (array.length == 0) break;
+        result.push(...array[array.length - 1].reverse());
+        for (let j = array.length - 2; j &gt;= 1 ; j--) {
+        result.push(array[j][0]);
+        array[j].shift();
+        }
+        array.pop();
+    }
+    return result;
+}</code></pre>    
+
+                </div>
+            </section>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="projects">Projects</h2>
+                </div>
+                <div class="section-description">
+                    <ul>
+                        <li><a href="https://github.com/questrator/rsschool-cv" target="_blank">RS Schools «CV» project</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="courses">Courses</h2>
+                </div>
+                <div class="section-description">
+                    <ul>
+                        <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="section-title-block">
+                    <h2 class="section-title" id="languages">Languages</h2>
+                </div>
+                <div class="section-description">
+                    <ul>
+                        <li>Russian (native)</li>
+                        <li>English (B1)</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="footer-wrapper">
+        <footer class="footer-block">
+            <div class="footer-github">
+                <div class="person-contact github"><a href="https://github.com/questrator" target="_blank">questrator</a></div>
+            </div>
+            <div class="footer-copy">Slava Ivanov &copy; 2022</div>
+            <div class="footer-rss"><a href="https://rs.school/js/" target="_blank"><img src="./images/rs_school_js.svg" height="70" alt="Front-end / JS - RS School"></a></div>
+        </footer>
+    </div>
+    <script src="./js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
